@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="bidroom">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,86 +10,123 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://getwinningproposals.com/">
   <link rel="canonical" href="https://getwinningproposals.com/">
-  <meta name="theme-color" content="#101c29">
-  <link rel="stylesheet" href="style.css">
+  <meta name="theme-color" content="#f6f4ee">
+  <link rel="icon" type="image/svg+xml" href="mark.svg">
+  <link rel="stylesheet" href="daisyui.css">
+  <link rel="stylesheet" href="bidroom.css">
   <script src="script.js" defer></script>
 </head>
 <body id="top">
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="icon-down" viewBox="0 0 24 24"><path d="M12 5v14m-6-6 6 6 6-6"/></symbol>
+    <symbol id="icon-plan" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="1.5"/><path d="M3.5 12H11m0-8.5V16m0 4.5V19m0-7h5m4.5 0H19"/></symbol>
+    <symbol id="icon-estimate" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8.5 7h7m-7 4h1m5 0h1m-7 3.5h1m5 0h1m-7 3.5h1m5 0h1"/></symbol>
+    <symbol id="icon-proposal" viewBox="0 0 24 24"><path d="M7 3h7l5 5v11a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Zm7 0v5h5M9 12h6m-6 4h6"/></symbol>
+    <symbol id="icon-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+    <symbol id="icon-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4m-4 4v2"/></symbol>
+  </svg>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
-    <div class="wrap header-inner">
+    <div class="wrap navbar header-inner">
       <a class="brand" href="#top">
-        <svg class="brand-mark" width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="6" fill="currentColor"/><path d="M19 6 10 19h7l-2 9 9-13h-7z" fill="#101c29"/></svg>
-        <span>Get Winning<br>Proposals</span>
+        <img src="mark.svg" alt="" width="37" height="37">
+        <span>Get Winning<span class="brand-line">Proposals</span></span>
       </a>
-      <nav aria-label="Main navigation">
-        <a href="#services">Services</a>
-        <a href="#sample">Sample</a>
-        <a href="#process">Process</a>
-        <a href="#faq">FAQ</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul class="menu menu-horizontal">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#sample">Sample work</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
       </nav>
-      <a class="button button-small" href="#contact">Book a consultation <span aria-hidden="true">↗</span></a>
+      <a class="btn btn-outline header-cta" href="#contact">Book a consultation <svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a>
     </div>
   </header>
 
-  <main id="main">
-    <section class="hero" aria-labelledby="hero-title">
+  <main id="main" tabindex="-1">
+    <section class="hero-section" aria-labelledby="hero-title">
       <div class="wrap hero-grid">
-        <div>
-          <p class="eyebrow hero-eyebrow"><span></span> For U.S. electrical contractors</p>
-          <h1 id="hero-title">Electrical estimating for your next bid.</h1>
-          <p class="hero-lede">When your team needs extra estimating capacity, get marked-up plans, an editable Excel estimate, and a proposal draft you can review before bid day.</p>
+        <div class="hero-copy">
+          <p class="badge audience-badge"><span aria-hidden="true"></span> For U.S. electrical contractors</p>
+          <h1 id="hero-title">Electrical estimating for <em>your next bid.</em></h1>
+          <p class="hero-lede">Get marked-up plans, an editable Excel estimate, and a proposal draft you can review before bid day.</p>
           <div class="hero-actions">
-            <a class="button" href="#contact">Book a consultation <span aria-hidden="true">↗</span></a>
-            <a class="text-link" href="#sample">See a sample package <span aria-hidden="true">↓</span></a>
+            <a class="btn btn-primary" href="#contact">Book a consultation <svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a>
+            <a class="btn btn-ghost sample-link" href="#sample">See sample work <svg class="icon" aria-hidden="true"><use href="#icon-down"/></svg></a>
           </div>
           <p class="hero-note">Start with a short call about your scope and deadline.</p>
         </div>
-        <figure class="hero-plan">
-          <div class="plan-label"><span><b>01</b> / ELECTRICAL TAKEOFF</span><span>E1.01 · REV 01</span></div>
-          <img src="takeoff.svg" alt="Example electrical floor plan with eight fixture marks, six receptacle marks, and the measured conduit route." width="560" height="338">
-          <figcaption><span>OFFICE TENANT IMPROVEMENT</span><span>ILLUSTRATIVE SAMPLE</span></figcaption>
+
+        <figure class="card hero-plan">
+          <div class="plan-header">
+            <div class="plan-file">
+              <span class="plan-icon"><svg class="icon" aria-hidden="true"><use href="#icon-plan"/></svg></span>
+              <div><strong>Electrical takeoff</strong><span>Office tenant improvement</span></div>
+            </div>
+            <span class="badge plan-revision">E1.01 / REV 01</span>
+          </div>
+          <img src="takeoff.svg" alt="Example electrical floor plan with eight fixture marks, six receptacle marks, and a 120-foot conduit route." width="560" height="338">
+          <figcaption class="plan-footer"><span class="plan-type"><span aria-hidden="true"></span> Illustrative sample</span><a class="link" href="#sample">View full package <svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></figcaption>
         </figure>
+      </div>
+
+      <div class="wrap deliverable-rail">
+        <p class="rail-title">What you get</p>
+        <ul role="list">
+          <li><svg class="icon" aria-hidden="true"><use href="#icon-plan"/></svg> Marked-up drawings</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#icon-estimate"/></svg> Editable Excel estimate</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#icon-proposal"/></svg> Bid proposal draft</li>
+        </ul>
       </div>
     </section>
 
-    <section id="services" class="section" aria-labelledby="services-title">
+    <section id="services" class="section services-section" aria-labelledby="services-title">
       <div class="wrap">
-        <div class="section-intro">
-          <p class="eyebrow">01 / Services</p>
-          <h2 id="services-title">Choose where you need help.</h2>
+        <div class="section-intro intro-wide">
+          <div>
+            <p class="eyebrow">01 / Services</p>
+            <h2 id="services-title">Choose where you need help.</h2>
+          </div>
           <p>From a takeoff for one commercial bid to a full package for contractor review. We agree on the deliverables and quote the job after reviewing the scope.</p>
         </div>
         <div class="service-grid">
-          <article class="service">
-            <p class="tag">01 / Measure</p>
-            <h3>Electrical takeoff</h3>
-            <p>Send us the drawings after the consultation. We’ll measure and count the agreed electrical scope.</p>
-            <ul>
-              <li>Marked-up drawing PDF</li>
-              <li>Editable quantities by sheet or system</li>
-              <li>Scope questions and exclusions</li>
-            </ul>
+          <article class="card service">
+            <div class="card-body">
+              <div class="service-meta"><span class="service-icon"><svg class="icon" aria-hidden="true"><use href="#icon-plan"/></svg></span><span class="badge badge-outline">01 / Measure</span></div>
+              <h3 class="card-title">Electrical takeoff</h3>
+              <p>Send us the drawings after the consultation. We’ll measure and count the agreed electrical scope.</p>
+              <ul class="deliverables" role="list">
+                <li>Marked-up drawing PDF</li>
+                <li>Editable quantities by sheet or system</li>
+                <li>Scope questions and exclusions</li>
+              </ul>
+            </div>
           </article>
-          <article class="service">
-            <p class="tag">02 / Price</p>
-            <h3>Takeoff + cost estimate</h3>
-            <p>Get an itemized Excel workbook you can check against the drawings and adapt to your rates.</p>
-            <ul>
-              <li>Material costs and pricing source notes</li>
-              <li>Labor hours and agreed rates</li>
-              <li>Allowances and estimating assumptions</li>
-            </ul>
+          <article class="card service">
+            <div class="card-body">
+              <div class="service-meta"><span class="service-icon"><svg class="icon" aria-hidden="true"><use href="#icon-estimate"/></svg></span><span class="badge badge-outline">02 / Price</span></div>
+              <h3 class="card-title">Takeoff + cost estimate</h3>
+              <p>Get an itemized Excel workbook you can check against the drawings and adapt to your rates.</p>
+              <ul class="deliverables" role="list">
+                <li>Material costs and pricing source notes</li>
+                <li>Labor hours and agreed rates</li>
+                <li>Allowances and estimating assumptions</li>
+              </ul>
+            </div>
           </article>
-          <article class="service">
-            <p class="tag">03 / Package</p>
-            <h3>Estimate + bid proposal</h3>
-            <p>Get the estimate and a proposal draft that matches it. If your estimate is ready, ask for proposal drafting on its own.</p>
-            <ul>
-              <li>Proposal in your company’s format</li>
-              <li>Scope, inclusions, and exclusions</li>
-              <li>Alternates and validity period as agreed</li>
-            </ul>
+          <article class="card service">
+            <div class="card-body">
+              <div class="service-meta"><span class="service-icon"><svg class="icon" aria-hidden="true"><use href="#icon-proposal"/></svg></span><span class="badge badge-outline">03 / Package</span></div>
+              <h3 class="card-title">Estimate + bid proposal</h3>
+              <p>Get the estimate and a proposal draft that matches it. If your estimate is ready, ask for proposal drafting on its own.</p>
+              <ul class="deliverables" role="list">
+                <li>Proposal in your company’s format</li>
+                <li>Scope, inclusions, and exclusions</li>
+                <li>Alternates and validity period as agreed</li>
+              </ul>
+            </div>
           </article>
         </div>
       </div>
@@ -97,22 +134,26 @@
 
     <section id="sample" class="section sample-section" aria-labelledby="sample-title">
       <div class="wrap">
-        <div class="section-intro">
-          <p class="eyebrow">02 / Sample deliverables</p>
-          <h2 id="sample-title">From drawing to bid draft.</h2>
+        <div class="section-intro intro-wide">
+          <div>
+            <p class="eyebrow">02 / Sample deliverables</p>
+            <h2 id="sample-title">From drawing to bid draft.</h2>
+          </div>
           <p>Follow one fictional office fit-out through all three deliverables. The quantities and rates are illustrative.</p>
         </div>
         <div class="sample-grid">
-          <article class="sample-card">
+          <article class="card sample-card">
             <div class="sample-label"><span>01 / Drawing</span><span>E1.01</span></div>
-            <div class="sample-visual"><img src="takeoff.svg" alt="Marked-up electrical sheet E1.01 showing the items listed in the adjacent estimate." width="560" height="338" loading="lazy"></div>
-            <h3>Marked-up plan</h3>
-            <p>Trace fixture counts, receptacles, and conduit back to the sheet where they were measured.</p>
+            <div class="sample-visual"><img src="takeoff.svg" alt="Marked-up electrical sheet E1.01 showing eight fixtures, six outlets, and the conduit route." width="560" height="338" loading="lazy"></div>
+            <div class="card-body">
+              <h3 class="card-title">Marked-up plan</h3>
+              <p>Trace fixture counts, receptacles, and conduit back to the sheet where they were measured.</p>
+            </div>
           </article>
-          <article class="sample-card">
+          <article class="card sample-card">
             <div class="sample-label"><span>02 / Estimate</span><span>Excel excerpt</span></div>
             <div class="sample-visual worksheet">
-              <table>
+              <table class="table table-xs">
                 <caption>Sheet E1.01 · Rev 01</caption>
                 <thead><tr><th scope="col">Item</th><th scope="col">Qty</th><th scope="col">Material</th><th scope="col">Hours</th></tr></thead>
                 <tbody>
@@ -124,10 +165,12 @@
               </table>
               <p>*$880 material + 21.5 hours at $85/hr.</p>
             </div>
-            <h3>Editable Excel estimate</h3>
-            <p>See material and labor separately so you can check the quantities and adjust the inputs.</p>
+            <div class="card-body">
+              <h3 class="card-title">Editable Excel estimate</h3>
+              <p>See material and labor separately so you can check the quantities and adjust the inputs.</p>
+            </div>
           </article>
-          <article class="sample-card">
+          <article class="card sample-card">
             <div class="sample-label"><span>03 / Proposal</span><span>Draft excerpt</span></div>
             <div class="sample-visual proposal">
               <p class="proposal-title">Office fit-out</p>
@@ -135,8 +178,10 @@
               <p><strong>Excludes:</strong> Fire alarm, data cabling, and utility upgrades.</p>
               <p class="proposal-total"><span>Example bid <small>15% markup</small></span><strong>$3,113.63</strong></p>
             </div>
-            <h3>Bid proposal draft</h3>
-            <p>Review a clear scope, exclusions, and price that tie back to the estimate before submitting your bid.</p>
+            <div class="card-body">
+              <h3 class="card-title">Bid proposal draft</h3>
+              <p>Review a clear scope, exclusions, and price that tie back to the estimate before submitting your bid.</p>
+            </div>
           </article>
         </div>
       </div>
@@ -149,78 +194,89 @@
           <h2 id="process-title">What happens after you reach out.</h2>
           <p>You review the deliverables, set the final price, and submit the bid.</p>
         </div>
-        <ol class="steps">
-          <li><div><h3>Talk through the bid</h3><p>Tell us where the job is, when it’s due, and which parts of the estimate you’d like help with.</p></div></li>
-          <li><div><h3>Share drawings privately</h3><p>After the call, we’ll agree on a private way to share the drawings, specifications, and addenda.</p></div></li>
-          <li><div><h3>Agree on the quote</h3><p>We review the files and confirm the fee, scope, delivery date, and revision terms in writing before starting.</p></div></li>
-          <li><div><h3>Review the handoff</h3><p>Check the marked-up plans, workbook, or proposal draft. We flag open questions and assumptions for your review.</p></div></li>
+        <ol class="steps steps-vertical process-steps" role="list">
+          <li class="step step-primary" data-content="01"><div><h3>Talk through the bid</h3><p>Tell us where the job is, when it’s due, and which parts of the estimate you’d like help with.</p></div></li>
+          <li class="step step-primary" data-content="02"><div><h3>Share drawings privately</h3><p>After the call, we’ll agree on a private way to share the drawings, specifications, and addenda.</p></div></li>
+          <li class="step step-primary" data-content="03"><div><h3>Agree on the quote</h3><p>We review the files and confirm the fee, scope, delivery date, and revision terms in writing before starting.</p></div></li>
+          <li class="step step-primary" data-content="04"><div><h3>Review the handoff</h3><p>Check the marked-up plans, workbook, or proposal draft. We flag open questions and assumptions for your review.</p></div></li>
         </ol>
       </div>
     </section>
 
-    <section id="faq" class="section sample-section" aria-labelledby="faq-title">
+    <section id="faq" class="section faq-section" aria-labelledby="faq-title">
       <div class="wrap process-grid">
         <div class="section-intro">
           <p class="eyebrow">04 / FAQ</p>
           <h2 id="faq-title">Before you send a bid our way.</h2>
+          <p>Have a question about a specific job? <a class="link" href="#contact">Tell us about your bid</a>.</p>
         </div>
         <div class="faq-items">
-          <details>
-            <summary>How much does a project cost?</summary>
-            <p>We quote each job after reviewing the drawing set, deliverables, complexity, and deadline. Takeoff-only and proposal-only work can be quoted separately.</p>
+          <details class="collapse collapse-plus">
+            <summary class="collapse-title">How much does a project cost?</summary>
+            <div class="collapse-content"><p>We quote each job after reviewing the drawing set, deliverables, complexity, and deadline. Takeoff-only and proposal-only work can be quoted separately.</p></div>
           </details>
-          <details>
-            <summary>How fast can you turn it around?</summary>
-            <p>Share your bid deadline and time zone in the initial inquiry. We’ll confirm whether the job fits and agree on a delivery date after reviewing the drawings.</p>
+          <details class="collapse collapse-plus">
+            <summary class="collapse-title">How fast can you turn it around?</summary>
+            <div class="collapse-content"><p>Share your bid deadline and time zone in the initial inquiry. We’ll confirm whether the job fits and agree on a delivery date after reviewing the drawings.</p></div>
           </details>
-          <details>
-            <summary>What happens if an addendum changes the scope?</summary>
-            <p>Send the addendum as soon as it arrives. We’ll confirm what’s covered by the agreed revision terms and discuss any fee or schedule change before doing extra work.</p>
+          <details class="collapse collapse-plus">
+            <summary class="collapse-title">What happens if an addendum changes the scope?</summary>
+            <div class="collapse-content"><p>Send the addendum as soon as it arrives. We’ll confirm what’s covered by the agreed revision terms and discuss any fee or schedule change before doing extra work.</p></div>
           </details>
-          <details>
-            <summary>Whose labor rates and material prices do you use?</summary>
-            <p>We agree on the inputs with you and identify supplier pricing, dates, and assumptions in the workbook. You review those inputs and approve the final bid price.</p>
+          <details class="collapse collapse-plus">
+            <summary class="collapse-title">Whose labor rates and material prices do you use?</summary>
+            <div class="collapse-content"><p>We agree on the inputs with you and identify supplier pricing, dates, and assumptions in the workbook. You review those inputs and approve the final bid price.</p></div>
           </details>
-          <details>
-            <summary>How should I share confidential drawings?</summary>
-            <p>Keep your first inquiry to basic project details. After the call, we’ll agree on how to transfer the drawings privately and discuss any access or handling requirements.</p>
+          <details class="collapse collapse-plus">
+            <summary class="collapse-title">How should I share confidential drawings?</summary>
+            <div class="collapse-content"><p>Keep your first inquiry to basic project details. After the call, we’ll agree on how to transfer the drawings privately and discuss any access or handling requirements.</p></div>
           </details>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="section contact-section" aria-labelledby="contact-title">
+    <section id="contact" class="section contact-section" data-theme="bidroom-dark" aria-labelledby="contact-title">
       <div class="wrap contact-grid">
         <div class="section-intro">
-          <p class="eyebrow hero-eyebrow">05 / Consultation</p>
+          <p class="eyebrow">05 / Consultation</p>
           <h2 id="contact-title">Tell us about your next bid.</h2>
           <p>Request a consultation so we can discuss your scope, deadline, and what you need back.</p>
-          <a class="contact-email" id="contact-email" href="mailto:fatimazaidi788@gmail.com?subject=Electrical%20estimating%20consultation">fatimazaidi788@gmail.com</a>
-          <p id="privacy" class="privacy-note"><strong>Inquiry privacy:</strong> This site opens a draft in your email app. We receive the details only if you send it, and use them to respond and discuss your project. Please leave out drawings and sensitive details.</p>
-        </div>
-        <form id="inquiry" class="inquiry" hidden aria-describedby="inquiry-help">
-          <div class="form-grid">
-            <label>Name <input name="name" autocomplete="name" maxlength="100" required></label>
-            <label>Company <input name="company" autocomplete="organization" maxlength="120" required></label>
-            <label>Business email <input type="email" name="email" autocomplete="email" maxlength="160" required></label>
-            <label>Job location <input name="location" placeholder="City, state" maxlength="120"></label>
-            <label>Project type <input name="project" placeholder="e.g. Office fit-out" maxlength="120"></label>
-            <label>Bid deadline and time zone <input name="deadline" placeholder="e.g. Dec 4, 2 p.m. CT" maxlength="120"></label>
+          <a class="link contact-email" id="contact-email" href="mailto:fatimazaidi788@gmail.com?subject=Electrical%20estimating%20consultation"><svg class="icon" aria-hidden="true"><use href="#icon-mail"/></svg> fatimazaidi788@gmail.com</a>
+          <div id="privacy" class="alert inquiry-privacy">
+            <svg class="icon" aria-hidden="true"><use href="#icon-lock"/></svg>
+            <p><strong>Keep your drawings private.</strong> Share basic project details here. We’ll agree on a private way to transfer drawings after the call.</p>
           </div>
-          <label>How can we help? <textarea name="scope" rows="3" maxlength="500" required></textarea></label>
-          <div class="form-actions">
-            <button class="button" type="submit">Open email draft <span aria-hidden="true">↗</span></button>
-            <p id="inquiry-help">Review and send the request from your email app.</p>
+        </div>
+        <form id="inquiry" class="card inquiry" data-theme="bidroom" hidden aria-labelledby="inquiry-title" aria-describedby="inquiry-help">
+          <div class="card-body">
+            <h3 id="inquiry-title" class="card-title">Consultation request</h3>
+            <p id="inquiry-help">This opens a draft in your email app. We receive your details when you send it and use them to respond about your project.</p>
+            <p class="required-note"><span aria-hidden="true">*</span> Required fields</p>
+            <div class="form-grid">
+              <label class="form-field">Name <span aria-hidden="true">*</span><input class="input" name="name" autocomplete="name" maxlength="100" required></label>
+              <label class="form-field">Company <span aria-hidden="true">*</span><input class="input" name="company" autocomplete="organization" maxlength="120" required></label>
+              <label class="form-field">Business email <span aria-hidden="true">*</span><input class="input" type="email" name="email" autocomplete="email" maxlength="160" required></label>
+              <label class="form-field">Job location<input class="input" name="location" placeholder="City, state" maxlength="120"></label>
+              <label class="form-field">Project type<input class="input" name="project" placeholder="e.g. Office fit-out" maxlength="120"></label>
+              <label class="form-field">Bid deadline and time zone<input class="input" name="deadline" placeholder="e.g. Dec 4, 2 p.m. CT" maxlength="120"></label>
+            </div>
+            <label class="form-field">How can we help? <span aria-hidden="true">*</span><textarea class="textarea" name="scope" rows="3" maxlength="500" required></textarea></label>
+            <div class="card-actions">
+              <button class="btn btn-primary" type="submit">Open email draft <svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></button>
+            </div>
           </div>
         </form>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="wrap footer-inner">
-      <p><strong>Get Winning Proposals</strong><br>Electrical estimating and bid support</p>
-      <nav aria-label="Footer navigation"><a href="#contact">Contact</a><a href="#privacy">Inquiry privacy</a><a href="#top">Back to top ↑</a></nav>
+  <footer class="site-footer" data-theme="bidroom-dark">
+    <div class="wrap footer footer-inner">
+      <a class="brand" href="#top">
+        <img src="mark.svg" alt="" width="37" height="37">
+        <span>Get Winning Proposals<small>Electrical estimating and bid support</small></span>
+      </a>
+      <nav aria-label="Footer navigation"><a class="link link-hover" href="#contact">Contact</a><a class="link link-hover" href="#privacy">Inquiry privacy</a><a class="link link-hover" href="#top">Back to top <svg class="icon" aria-hidden="true"><use href="#icon-down"/></svg></a></nav>
     </div>
   </footer>
 </body>

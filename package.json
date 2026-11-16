@@ -1,0 +1,12 @@
+{
+  "name": "getwinningproposals",
+  "private": true,
+  "scripts": {
+    "build:css": "tailwindcss -i ./components.css -o ./daisyui.css --minify"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "4.3.3",
+    "daisyui": "5.7.4",
+    "tailwindcss": "4.3.3"
+  }
+}

@@ -4,7 +4,11 @@ Service website for outsourced electrical takeoffs, cost estimates, and bid prop
 
 ## Preview
 
-Run `python3 -m http.server 8000 --bind 127.0.0.1` from the repository root and open `http://127.0.0.1:8000/`. The GitHub Pages site uses plain HTML, CSS, and JavaScript and needs no build. The root `CNAME` retains the custom domain.
+Run `python3 -m http.server 8000 --bind 127.0.0.1` from the repository root and open `http://127.0.0.1:8000/`. The root `CNAME` retains the custom domain.
+
+## Styles
+
+The site serves a checked-in DaisyUI stylesheet, so GitHub Pages and local previews do not need a build or a CDN. DaisyUI component selection and the two brand themes live in `components.css`; page layout and typography live in `bidroom.css`. Run `npm ci` and `npm run build:css` after changing the DaisyUI component markup or theme, and include the regenerated `daisyui.css` with the source changes.
 
 ## Intake and samples
 

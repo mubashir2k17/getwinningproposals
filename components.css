@@ -1,0 +1,46 @@
+@import "tailwindcss" source(none);
+@source "./index.html";
+
+@plugin "daisyui" {
+  themes: false;
+  include: navbar, menu, button, badge, card, table, steps, collapse, input, textarea, alert, link, footer;
+}
+
+@plugin "daisyui/theme" {
+  name: "bidroom";
+  default: true;
+  color-scheme: light;
+  --color-base-100: #fffcf7;
+  --color-base-200: #f6f4ee;
+  --color-base-300: #e9e3d8;
+  --color-base-content: #172331;
+  --color-primary: #f3a45f;
+  --color-primary-content: #231b15;
+  --radius-selector: .5rem;
+  --radius-field: .5rem;
+  --radius-box: .75rem;
+  --size-selector: .25rem;
+  --size-field: .25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}
+
+@plugin "daisyui/theme" {
+  name: "bidroom-dark";
+  color-scheme: dark;
+  --color-base-100: #172331;
+  --color-base-200: #202e3e;
+  --color-base-300: #3d4c5d;
+  --color-base-content: #fffaf2;
+  --color-primary: #f3a45f;
+  --color-primary-content: #231b15;
+  --radius-selector: .5rem;
+  --radius-field: .5rem;
+  --radius-box: .75rem;
+  --size-selector: .25rem;
+  --size-field: .25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}
