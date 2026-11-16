@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 338" width="560" height="338" fill="none">
+  <defs>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0v20" stroke="#284252" stroke-width="1"/></pattern>
+    <g id="fixture"><rect x="-15" y="-5" width="30" height="10" rx="1" fill="#f5c75b" fill-opacity=".17" stroke="#f5c75b" stroke-width="1.4"/><path d="M-10 0h20" stroke="#f5c75b" stroke-width="1.2"/></g>
+    <g id="outlet"><circle r="5" fill="#152737" stroke="#80dcd1" stroke-width="1.4"/><path d="M-2 2v-4m4 0v4" stroke="#80dcd1" stroke-width="1"/></g>
+  </defs>
+  <rect width="560" height="338" fill="#162a3a"/>
+  <rect width="560" height="338" fill="url(#grid)"/>
+  <g stroke="#779ba8" stroke-width="1" opacity=".7">
+    <path d="M82 31v15m132-15v15m173-15v15m92-15v15M82 38h397M54 59H38m16 108H38m16 99H38m8-207v207"/>
+    <path d="M72 69h416v197H72z M79 76h402v183H79z" stroke-width="1.5"/>
+    <path d="M209 76v38m0 32v47m0 32v34m5-183v38m0 32v47m0 32v34M385 76v56m0 32v95m5-183v56m0 32v95M79 167h130m0 5H79"/>
+    <path d="M209 114h32a32 32 0 0 1-32 32m0 47h32a32 32 0 0 1-32 32m181-93h32a32 32 0 0 1-32 32"/>
+    <path d="M295 266v-32a32 32 0 0 0-32 32m0-7h32m3 0h26"/>
+    <path d="M90 81h102m-102 91h102m215-91h60m-210 0h98" opacity=".35"/>
+  </g>
+  <path d="M459 230h-89V186H245v-68H170v100h-47" stroke="#80dcd1" stroke-width="2" stroke-dasharray="5 5" opacity=".85"/>
+  <g>
+    <use href="#fixture" x="125" y="116"/><use href="#fixture" x="169" y="116"/>
+    <use href="#fixture" x="125" y="216"/><use href="#fixture" x="169" y="216"/>
+    <use href="#fixture" x="270" y="128"/><use href="#fixture" x="337" y="128"/>
+    <use href="#fixture" x="303" y="208"/><use href="#fixture" x="434" y="199"/>
+    <use href="#outlet" x="105" y="80"/><use href="#outlet" x="192" y="161"/>
+    <use href="#outlet" x="102" y="252"/><use href="#outlet" x="353" y="80"/>
+    <use href="#outlet" x="352" y="253"/><use href="#outlet" x="475" y="177"/>
+  </g>
+  <g font-family="monospace" font-size="10" letter-spacing="1" fill="#a3bdc8">
+    <text x="120" y="99">OFFICE</text><text x="105" y="196">MEETING</text>
+    <text x="270" y="104">OPEN OFFICE</text><text x="404" y="105">STORAGE</text>
+    <text x="435" y="247" fill="#80dcd1">PANEL</text>
+  </g>
+  <path d="M72 290h416" stroke="#4c697a"/>
+  <g font-family="monospace" font-size="11" letter-spacing=".4" fill="#dae6eb">
+    <use href="#fixture" x="85" y="310"/><text x="107" y="314">8 LED FIXTURES</text>
+    <use href="#outlet" x="253" y="310"/><text x="268" y="314">6 OUTLETS</text>
+    <path d="M379 310h23" stroke="#80dcd1" stroke-width="2" stroke-dasharray="4 3"/><text x="409" y="314">120 FT</text>
+  </g>
+</svg>

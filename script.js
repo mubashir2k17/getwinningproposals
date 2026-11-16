@@ -1,62 +1,28 @@
-// Navbar scroll effect
-window.addEventListener('scroll', () => {
-    const navbar = document.getElementById('navbar');
-    if (window.scrollY > 40) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
+const inquiry = document.querySelector('#inquiry');
+const emailLink = document.querySelector('#contact-email');
+const fields = [
+  ['name', 'Name'],
+  ['company', 'Company'],
+  ['email', 'Business email'],
+  ['location', 'Job location'],
+  ['project', 'Project type'],
+  ['deadline', 'Bid deadline and time zone'],
+  ['scope', 'How we can help'],
+];
+
+inquiry.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const data = new FormData(inquiry);
+  const details = fields.flatMap(([field, label]) => {
+    const value = data.get(field).trim();
+    return value ? [label + ': ' + value] : [];
+  });
+  const body = [
+    'Hello, I would like to request an electrical estimating consultation.',
+    '',
+    ...details,
+  ].join('\r\n');
+  window.location.href = emailLink.href + '&body=' + encodeURIComponent(body);
 });
 
-// Mobile menu toggle
-const mobileToggle = document.getElementById('mobileToggle');
-const navMenu = document.getElementById('navMenu');
-
-if (mobileToggle) {
-    mobileToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-    });
-}
-
-// Pricing Toggle (Monthly vs Annual)
-const pricingToggle = document.getElementById('pricingToggle');
-const amounts = document.querySelectorAll('.amount');
-const monthlyLabel = document.getElementById('monthlyLabel');
-const annualLabel = document.getElementById('annualLabel');
-
-if (pricingToggle) {
-    pricingToggle.addEventListener('change', (e) => {
-        const isAnnual = e.target.checked;
-        
-        if (isAnnual) {
-            monthlyLabel.style.color = 'var(--text-muted)';
-            annualLabel.style.color = 'var(--text-main)';
-        } else {
-            monthlyLabel.style.color = 'var(--text-main)';
-            annualLabel.style.color = 'var(--text-muted)';
-        }
-
-        amounts.forEach(amountEl => {
-            const monthlyVal = amountEl.getAttribute('data-monthly');
-            const annualVal = amountEl.getAttribute('data-annual');
-            amountEl.textContent = isAnnual ? annualVal : monthlyVal;
-        });
-    });
-}
-
-// Interactive AI Suggestion Demo Button
-const applyAiBtn = document.getElementById('applyAiBtn');
-const activityText = document.getElementById('activityText');
-
-if (applyAiBtn && activityText) {
-    applyAiBtn.addEventListener('click', () => {
-        applyAiBtn.textContent = '✓ ROI Clause Inserted';
-        applyAiBtn.style.background = '#10b981';
-        activityText.textContent = 'AI updated proposal: Guaranteed 24% ROI terms added to Acceptance section.';
-        
-        setTimeout(() => {
-            applyAiBtn.textContent = 'Apply Suggestion';
-            applyAiBtn.style.background = 'var(--primary)';
-        }, 4000);
-    });
-}
+inquiry.hidden = false;
